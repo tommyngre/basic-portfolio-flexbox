@@ -5,6 +5,16 @@ body{
   height: 100%;
 }
 
+h1, .header-font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:1.5em;
+}
+
+.content-font {
+  font-size: 1.2em; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
   width:100%;
   background-color: #DDDDDD;
@@ -14,10 +24,8 @@ header {
 }
 
 .name{
-  width: 50%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size:1.5em;
   font-weight:bold;
+  width: 50%;
   background-color:#EEEEEE;
   padding:5px 10px 8px 10px;
 }
@@ -30,31 +38,12 @@ header {
 .link{
   float:right;
   margin-left:20px;
-  font-size: 1.2em; 
-  font-family: Arial, Helvetica, sans-serif;
 }
-
 .link:hover{
-  float:right;
-  margin-left:20px;
-  font-size: 1.2em; 
-  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
-.content{
-  width: 960px;
-  margin: 0 auto;
-  font-size: 1.2em; 
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size:1.5em;
-}
-
+/* ensures padding around elements */
 .section-content-wrapper{
   margin:15px;
 }
@@ -71,42 +60,40 @@ h1 {
   background-color: #EEEEEE;
   float:left;
   padding-bottom:15px;
-  margin-bottom:80px; /* keep content above footer */
+  margin-bottom:80px; /* keeps content above footer */
 }
 
-p{
+p-wrap{
   float:left;
 }
 
-.me{
+.me-pic{
   float:left;
   margin-right:15px;
   width:100px;
 }
 
-.proj-wrapper{
-  position:relative;
-  float:left;
+/* Project Gallery */
+.projects-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
+.proj-wrapper{
+  display:flex;
+}
+.proj-pic{
+  margin-bottom:30px;
+}
 .proj-name{
   position: absolute;
-  top:10;
-  left:10;
   color:black;
   background-color:white;
   padding:10px;
 }
 
-.portfolio-proj{
-  float:left;
-  margin:0px 28px 30px 0px;
-}
 
-.form{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* form elements */
 input{
   width:100%;
   margin: 5px 0px 10px 0px;
@@ -115,18 +102,15 @@ input{
   box-sizing: border-box;
   padding: 5px;
 }
-
 input[type=submit]{
   background-color:#93AB60;
   color:white;
+  margin-top:10px;
 }
-
 input[type=submit]:hover{
   background-color:#93AB60;
-  color:white;
   font-style: italic;
 }
-
 textarea {
   height:100px;
   width:100%;
@@ -139,26 +123,11 @@ textarea {
   padding: 5px;
 }
 
-input[type=submit]{
-  margin-top:10px;
-}
-
-.spacer-forty{
-  width:40px;
-  min-height: 1px;
-  float:left;
-}
-
 .right-content{
   width: 270px;
   background-color: #EEEEEE;
-  float:left;
+  float:right;
 }
-
-.icon-wrapper{
-  margin: 0 auto;
-}
-
 .icon{
   width:60px;
 }
@@ -171,7 +140,5 @@ footer {
   text-align:center;
   position:absolute;
   bottom:0;
-  font-family: Arial, Helvetica, sans-serif; 
-  font-size: 1.2em;
   position:fixed;
 }
